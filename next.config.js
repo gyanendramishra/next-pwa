@@ -11,7 +11,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    domain: "http://localhost:3000",
+    domain: "https://gyanendra-next-pwa.vercel.app",
   },
 };
 
