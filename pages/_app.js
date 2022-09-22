@@ -1,9 +1,10 @@
 import Head from "next/head";
+import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <Layout>
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-        <title>Next.js PWA Example</title>
+        <title>GKMeetups</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#317EFB" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </Layout>
   );
 }
 

@@ -5,11 +5,14 @@ const withPWA = require("next-pwa")({
   runtimeCaching,
   register: true,
   skipWaiting: true,
-  //disable: process.env.NODE_ENV === "development",
+  disable: process.env.NODE_ENV === "development",
 });
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    domain: "http://localhost:3000",
+  },
 };
 
 module.exports = withPWA(nextConfig);
