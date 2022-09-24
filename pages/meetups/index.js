@@ -18,14 +18,15 @@ function Meetups(props) {
 }
 
 export async function getStaticProps() {
-  const result = await fetch(`${process.env.domain}/api/meetups/all`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  // const result = await fetch(`/api/meetups/all`, {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
 
-  const { data = [] } = await result.json();
+  // const { data = [] } = await result.json();
+  const data = [];
 
   return {
     props: {

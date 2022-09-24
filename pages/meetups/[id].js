@@ -21,14 +21,15 @@ function MeetupDetails(props) {
 }
 
 export async function getStaticPaths() {
-  const result = await fetch(`${process.env.domain}/api/meetups/all`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  // const result = await fetch(`${process.env.domain}/api/meetups/all`, {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
 
-  const { data = [] } = await result.json();
+  // const { data = [] } = await result.json();
+  const data = [];
 
   return {
     fallback: "blocking",
@@ -39,19 +40,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const meetupId = context.params.id;
+  // const meetupId = context.params.id;
 
-  const result = await fetch(
-    `${process.env.domain}/api/meetups/filter?id=${meetupId}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  // const result = await fetch(
+  //   `${process.env.domain}/api/meetups/filter?id=${meetupId}`,
+  //   {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }
+  // );
 
-  const { data = {} } = await result.json();
+  // const { data = {} } = await result.json();
+  const data = {};
   return {
     props: {
       meetupData: {
