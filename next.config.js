@@ -10,6 +10,9 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ["upload.wikimedia.org"],
+  },
   env: {
     domain:
       process.env.NODE_ENV === "development"

@@ -4,7 +4,13 @@ import classes from "./MeetupDetail.module.css";
 function MeetupDetail(props) {
   return (
     <section className={classes.detail}>
-      <Image src={props.image} alt={props.title} />
+      <Image
+        src={props.image}
+        alt={props.title}
+        height={500}
+        width={500}
+        layout="responsive"
+      />
       <h1>{props.title}</h1>
       <address>{props.address}</address>
       <p>{props.description}</p>
